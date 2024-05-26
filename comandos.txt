@@ -1,0 +1,5 @@
+docker container cp rti-player.html alqutami:/usr/local/nginx/html/players/rti-player.html
+
+docker container cp nginx.conf alqutami:/etc/nginx/nginx.conf
+
+docker exec -it 84303a6ddc8b /bin/bash
