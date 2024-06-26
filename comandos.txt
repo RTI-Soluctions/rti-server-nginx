@@ -1,0 +1,16 @@
+docker run -d --name "server-rtmp" -p 1936:1936 -p 8086:8086 ormartins/rti-server-rtmp:latest
+
+docker container cp rti-player.html alqutami:/usr/local/nginx/html/players/rti-player.html
+
+docker container cp nginx.conf alqutami:/etc/nginx/nginx.conf
+
+docker exec -it 84303a6ddc8b /bin/bash
+
+ - test é a streamkey
+rtmp://localhost:1936/live/test 
+
+ - link para assistir na web
+http://localhost:8086/players/rti-player.html
+
+ - link para player - VLC - VMIX - OBS -  que tenha suporte a extensão .m3u8
+http://localhost:8086/hls/test.m3u8
