@@ -1,4 +1,4 @@
-docker run -d --name "server-rtmp" -p 1936:1936 -p 8086:8086 ormartins/rti-server-rtmp:latest
+docker run -d --name "server-rtmp" -p 1935:1935 -p 8080:8080 ormartins/rti-server-rtmp:latest
 
 docker container cp rti-player.html alqutami:/usr/local/nginx/html/players/rti-player.html
 
